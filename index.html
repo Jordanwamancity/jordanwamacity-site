@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jordan wa Man City — football, graphic design, photo editing and creative work from Uganda.">
+  <meta name="theme-color" content="#071b35">
+  <title>Jordan wa Man City | Football • Design • Creativity</title>
+  <style>
+    :root{--navy:#071b35;--navy2:#0d2c50;--sky:#70c5ff;--blue:#168bd5;--ice:#eaf6ff;--ink:#102b46;--muted:#9bb4ca;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f9fd;color:var(--ink)}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(7,27,53,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;color:white;font-weight:900;letter-spacing:.4px}
+    .crest{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#a9e1ff,#168bd5);color:#06213d;font-weight:900;border:2px solid white}
+    .links{display:flex;align-items:center;gap:23px;color:#d9efff;font-size:14px}
+    .links a:hover{color:var(--sky)} .menu{display:none;background:none;border:1px solid #52718f;color:white;padding:9px 12px;border-radius:9px;font-size:20px}
+    .hero{background:radial-gradient(circle at 80% 15%,#1b5c8c 0,#0c3459 32%,#071b35 72%);color:white;overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(112,197,255,.18);border-radius:50%;right:-120px;bottom:-240px;box-shadow:0 0 0 35px rgba(112,197,255,.04),0 0 0 75px rgba(112,197,255,.03)}
+    .hero-inner{padding:92px 0 86px;position:relative;z-index:1;max-width:760px}
+    .eyebrow{color:var(--sky);font-weight:800;letter-spacing:2.5px;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(42px,7vw,76px);line-height:.98;margin:18px 0 20px;letter-spacing:-2px}
+    h1 span{color:var(--sky)} .hero p{color:#d2e8f8;line-height:1.75;font-size:18px;max-width:620px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:9px;font-weight:800;font-size:14px;transition:.2s}
+    .primary{background:var(--sky);color:#06213d}.primary:hover{background:white;transform:translateY(-2px)}
+    .outline{border:1px solid #8cb8d8;color:white}.outline:hover{background:#ffffff18}
+    .strip{background:#0b2b4b;color:#c8e7ff;padding:16px 0;text-align:center;font-weight:800;letter-spacing:2px;font-size:12px}
+    section{padding:76px 0}.section-head{margin-bottom:28px}.section-head .eyebrow{color:#168bd5}
+    h2{font-size:clamp(28px,4vw,42px);margin:10px 0;color:var(--navy);letter-spacing:-1px}
+    .lead{color:#55718a;line-height:1.7;max-width:700px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border:1px solid #dceaf5;border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(15,54,88,.05)}
+    .icon{width:48px;height:48px;border-radius:13px;background:#e2f3ff;display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+    .card h3{margin:0 0 9px;color:var(--navy)}.card p{margin:0;color:#607b93;line-height:1.65;font-size:14px}
+    .about{background:var(--ice)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+    .profile{min-height:300px;border-radius:20px;background:linear-gradient(140deg,#0b3155,#168bd5 65%,#9cddff);display:flex;align-items:center;justify-content:center;color:white;text-align:center;padding:30px}
+    .profile .monogram{font-size:76px;font-weight:900;letter-spacing:-6px;text-shadow:0 8px 25px #06213d55}
+    .profile small{display:block;letter-spacing:3px;font-weight:800}
+    .facts{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.pill{background:white;border:1px solid #d1e6f5;border-radius:99px;padding:9px 13px;font-size:12px;font-weight:800;color:#235477}
+    .gallery{grid-template-columns:repeat(3,1fr)}
+    .work{min-height:210px;border-radius:16px;overflow:hidden;position:relative;background:linear-gradient(145deg,#0b2b4b,#168bd5);display:flex;align-items:end;padding:20px;color:white}
+    .work:nth-child(2){background:linear-gradient(145deg,#13253c,#4b83b5)}.work:nth-child(3){background:linear-gradient(145deg,#123f65,#91d7ff)}
+    .work:nth-child(4){background:linear-gradient(145deg,#071b35,#285b82)}.work:nth-child(5){background:linear-gradient(145deg,#194d73,#70c5ff)}.work:nth-child(6){background:linear-gradient(145deg,#102d49,#477da5)}
+    .work:before{content:"JWMC";position:absolute;top:12px;right:16px;font-weight:900;font-size:36px;color:#ffffff20;letter-spacing:-2px}
+    .work strong{font-size:17px;position:relative}.work span{display:block;font-size:12px;color:#d9efff;margin-top:5px}
+    .contact{background:var(--navy);color:white}.contact h2{color:white}.contact .lead{color:#c4d9e9}
+    .contact-box{background:#0d2c50;border:1px solid #254968;border-radius:18px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .contact-box h3{margin:0 0 7px}.contact-box p{margin:0;color:#b8d2e7;font-size:14px;line-height:1.6}
+    footer{background:#041326;color:#9bb4ca;padding:23px 0;font-size:12px;text-align:center;line-height:1.7}
+    @media(max-width:760px){.menu{display:block}.links{display:none;position:absolute;top:72px;left:0;right:0;background:#071b35;padding:18px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid #254968}.links.open{display:flex}.hero-inner{padding:70px 0}.grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.work{min-height:165px}section{padding:58px 0}}
+    @media(max-width:420px){.gallery{grid-template-columns:1fr}.brand{font-size:13px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="crest">JW</span><span>JORDAN WA MAN CITY</span></a>
+    <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-inner">
+      <div class="eyebrow">Uganda 🇺🇬 • Football • Creative Studio</div>
+      <h1>WELCOME TO<br><span>MY WORLD.</span></h1>
+      <p>I'm Jordan wa Man City — a football fan and creative designer bringing ideas to life through sports graphics, posters and photo editing.</p>
+      <div class="actions">
+        <a class="btn primary" href="#gallery">Explore my work</a>
+        <a class="btn outline" href="#contact">Contact Jordan</a>
+      </div>
+    </div>
+  </section>
+  <div class="strip">THE SKY IS BLUE &nbsp; • &nbsp; CITY UNTIL I DIE &nbsp; • &nbsp; CREATE WITH PASSION</div>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div class="profile"><div><div class="monogram">JW</div><small>JORDAN WA MAN CITY</small></div></div>
+      <div>
+        <div class="eyebrow">A little about me</div>
+        <h2>Football heart.<br>Creative mind.</h2>
+        <p class="lead">I'm Jordan, a creator from Uganda. I love Manchester City, football and visual creativity. This website is where I share my football world, graphic design projects and photo edits.</p>
+        <div class="facts"><span class="pill">🇺🇬 Uganda</span><span class="pill">🔵 Man City</span><span class="pill">🎨 Graphic Designer</span><span class="pill">📸 Photo Editor</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What I do</div><h2>My creative services</h2><p class="lead">Need a design that stands out? Explore the creative services I offer.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🎂</div><h3>Birthday Posters</h3><p>Personalised birthday designs to celebrate special people and moments.</p></article>
+        <article class="card"><div class="icon">📣</div><h3>Business Posters</h3><p>Promotional graphics for businesses, brands, products and services.</p></article>
+        <article class="card"><div class="icon">⚽</div><h3>Football Graphics</h3><p>Match posters, player edits, fan designs and football-themed artwork.</p></article>
+        <article class="card"><div class="icon">🪪</div><h3>Fan ID Cards</h3><p>Custom football fan cards and supporter identity designs.</p></article>
+        <article class="card"><div class="icon">🖼️</div><h3>Photo Editing</h3><p>Creative photo edits, retouching and visual transformations.</p></article>
+        <article class="card"><div class="icon">✨</div><h3>Personal Wishes</h3><p>Special designs for greetings, celebrations and personal messages.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="about">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Selected creations</div><h2>My design gallery</h2><p class="lead">A showcase area for your posters, football edits and creative projects. Replace these sample tiles with your own images when you're ready.</p></div>
+      <div class="grid gallery">
+        <div class="work"><div><strong>Football Posters</strong><span>Matchday & player designs</span></div></div>
+        <div class="work"><div><strong>Birthday Designs</strong><span>Celebration artwork</span></div></div>
+        <div class="work"><div><strong>Photo Editing</strong><span>Creative transformations</span></div></div>
+        <div class="work"><div><strong>Fan ID Cards</strong><span>Supporter identity</span></div></div>
+        <div class="work"><div><strong>Business Graphics</strong><span>Promotional designs</span></div></div>
+        <div class="work"><div><strong>More Creativity</strong><span>Ideas made visual</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow">Let's connect</div><h2>Have a project in mind?</h2>
+      <p class="lead">Contact me for graphic design, photo editing or collaborations. Follow my football and creative journey online.</p>
+      <div class="contact-box">
+        <div><h3>JORDAN WA MAN CITY</h3><p>TikTok: @jordanwamancityy<br>WhatsApp: add your number to activate this button.</p></div>
+        <div class="actions">
+          <a class="btn primary" href="https://www.tiktok.com/@jordanwamancityy" target="_blank" rel="noopener">Visit my TikTok</a>
+          <a class="btn outline" href="https://wa.me/256YOURNUMBER" target="_blank" rel="noopener">WhatsApp me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">© <span id="year"></span> JORDAN WA MAN CITY. All rights reserved.<br>Independent fan and creative portfolio; not an official Manchester City FC website.</div>
+</footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
